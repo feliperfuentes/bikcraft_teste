@@ -6,6 +6,12 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 600px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 ul {
@@ -59,6 +65,65 @@ a {
 
 .header-menu a:hover::after {
   width: 100%;
+}
+
+.introducao-bg {
+  background: #000;
+  box-shadow: inset 0 -120px #fff;
+}
+
+.introducao-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.introducao-descricao {
+  color: #fff;
+  align-self: end;
+}
+
+.introducao-descricao h1 {
+  font-size: 4rem;
+  line-height: 1.125;
+  margin-bottom: 32px;
+}
+
+.introducao-descricao span {
+  color: #FFBB00;
+}
+
+.introducao-descricao p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #B2B2B2;
+  margin-bottom: 20px;
+}
+
+.introducao-descricao a {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 18px 32px;
+  display: inline-block;
+  color: #332200;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  border-radius: 4px;
+  margin-bottom: 200px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.introducao-descricao a:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+.introducao-container img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 4px;
 }
 
 @media (max-width: 800px) {
