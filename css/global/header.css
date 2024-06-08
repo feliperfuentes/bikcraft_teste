@@ -8,9 +8,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 1200px;
-  /* background: bisque; */
-  margin: 0 auto;
+  /* max-width: 1160px;
+  background: bisque;
+  margin: 0 auto; */
   padding: 16px 20px;
 }
 
