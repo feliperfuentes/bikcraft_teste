@@ -34,6 +34,37 @@
   background: var(--cor-9);
 }
 
+.botao.seta {
+  place-self: end;
+  margin: 0;
+  padding-right: 62px;
+  position: relative;
+  display: flex;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline;
+  background-image: url("/img/icones/seta.svg");
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  right: 32px;
+  align-self: center;
+  transition: 0.2s;
+}
+
+.botao.seta:hover::after {
+  content: "";
+  display: inline;
+  background-image: url("/img/icones/seta.svg");
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  right: 28px;
+  align-self: center;
+}
+
 .link {
   display: inline-block;
   color: var(--cor-p1);
