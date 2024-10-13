@@ -5,7 +5,7 @@
 
 .contato {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 5fr 7fr;
 }
 
 .contato-dados {
@@ -92,16 +92,41 @@
 
 .contato-formulario .botao {
   margin: 0;
+  border: none;
+  white-space: nowrap;
+}
+
+.form div:nth-child(3),
+#text-mensagem,
+.form .botao {
+  grid-column: 1/-1;
+}
+
+.form button {
+  grid-column: 1;
+  cursor: pointer;
+}
+
+.form ::placeholder {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
 }
 
 @media (max-width: 800px) {
+  #contato main {
+    box-shadow: inset 0 512px var(--cor-11);
+  }
   .contato {
     grid-template-columns: 1fr;
   }
   .contato-dados,
   .contato-formulario {
     padding: 20px;
-    border-radius: initial;
+  }
+  .contato-dados {
+    border-radius: 5px 5px 0 0;
+  }
+  .contato-formulario {
+    border-radius: 0 0 5px 5px;
   }
   .contato-meios a:last-child {
     margin-bottom: 32px;
@@ -111,5 +136,14 @@
   }
   .contato-redes {
     margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  #contato main {
+    box-shadow: inset 0 524px var(--cor-11);
+  }
+  .form {
+    grid-template-columns: 1fr;
   }
 }
