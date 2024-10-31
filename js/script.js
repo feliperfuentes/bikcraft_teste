@@ -19,3 +19,24 @@ if(location.search && location.search.includes("tipo")) {
   let produto = document.querySelector("#" + ParamProduto)
   produto.checked = true
 }
+
+// Perguntas Frequentes
+const perguntas = document.querySelectorAll("dt")
+
+function mostrarResposta(e) {
+  const resposta = e.currentTarget.nextElementSibling
+  
+  if(!resposta.classList.contains("visivel")) {
+    resposta.classList.add("visivel")
+    e.currentTarget.classList.add("open")
+  } else {
+    resposta.classList.remove("visivel")
+    e.currentTarget.classList.remove("open")
+  }
+}
+
+function findPergunta(pergunta) {
+  pergunta.addEventListener("click", mostrarResposta)
+}
+
+perguntas.forEach(findPergunta)
